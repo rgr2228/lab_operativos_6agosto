@@ -13,16 +13,14 @@ int main(void) {
   /*testVolverMayuscula();
   testEsLetra();
   testStringToMayuscula();*/
-  /*char str[1000];
-  int ch, n = 0;
-   while ((ch = getchar()) != EOF && n < 1000) {
-      str[n] = ch;
-      stringToMayuscula(str);
-      ++n;
+  //char ent1[2]= {'s','A'};
+  //stringToMayuscula(ent1);
+   while (1) {
+     char ent[100];
+     printf("Entrada>");
+      scanf("%s",ent);
+      stringToMayuscula(ent);
    }
-   */
-  char x[5]={'1','s','s','2','2'};
-  stringToMayuscula(x);
   return 0;
 }
 
@@ -33,17 +31,20 @@ int esLetra(char ch) {
 
 void volverMayuscula(char *ch) {
   if(esLetra!=0){
-      if(isalpha(*ch)==2)*ch = *ch-32;
+      int x = *ch;
+      if(x>96)*ch = *ch-32;
   }
 }
 
 void stringToMayuscula(char s[]) {
   int i=0;
+  printf("Salida>");
   while(s[i]!='\0'){
     volverMayuscula(s + i);
     printf("%c",s[i]);
     i++;
   }
+  printf("\n");
 }
 
 void testVolverMayuscula(void) {
